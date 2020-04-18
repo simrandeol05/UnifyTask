@@ -11,7 +11,7 @@ export default function productsReducer(state=initialState, action){
         case ADD_PRODUCT:
             return{
                 ...state,
-                products: state.products.concat(action.payload)
+                products: state.concat(action.payload)
             };
     
         default:

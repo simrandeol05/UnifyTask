@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "productName": "Vans Men's Suede Sk-8 Hi Shoe",
-      "price": "249",
-      "type": "Shoes"
-    },
-    {
       "id": "2",
       "productName": "Benneton's perfume",
       "price": "150",
@@ -61,46 +55,16 @@
       "type": "Accessories"
     },
     {
-      "id": "QV8u6wU"
+      "productName": "Calvin Klein Jacket",
+      "price": "1500",
+      "type": "Clothes",
+      "id": "ke7vC7B"
     },
     {
-      "id": "kG1STxL"
-    },
-    {
-      "id": "bk9JPJc"
-    },
-    {
-      "id": "supwBcq"
-    },
-    {
-      "id": "gqd4Euc"
-    },
-    {
-      "id": "Uvah4gz"
-    },
-    {
-      "id": "TengU90"
-    },
-    {
-      "id": "WGkDCR3"
-    },
-    {
-      "id": "b8lbB43"
-    },
-    {
-      "id": "-9U1DIk"
-    },
-    {
-      "id": "NrYhLb1"
-    },
-    {
-      "id": "9O9Det8"
-    },
-    {
-      "id": "ZqCxFdn"
-    },
-    {
-      "id": "b1ByhwN"
+      "productName": "Gucci Heels",
+      "price": "2000",
+      "type": "Shoes",
+      "id": "hIpz0Ws"
     }
   ]
 }

@@ -21,13 +21,21 @@ export const getProducts = () =>{
     };
 };
 
-export const addProduct = ( product ) => {
-    return(dispatch) => {
-        return axios.post(apiUrl)
+export const addProduct = ( product ) => dispatch => {
+
+        return axios.post(apiUrl, {
+
+            productName:product.productName,
+            price: product.price,
+            type: product.type
+
+        })
             .then(response => {
                 let data = response.data;
                 dispatch({ type:ADD_PRODUCT, payload: {productName: data.productName, price:data.price, type:data.type}})
             })
-            .catch(error => {throw(error) });
-    };
+            .catch(error => dispatch({
+                error
+            }));
+   
 };

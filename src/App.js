@@ -4,6 +4,7 @@ import { BrowserRouter, Route,Switch } from "react-router-dom";
 import ProductAdd from './components/ProductAdd';
 import ProductEdit from './components/ProductEdit';
 import ProductList from './components/ProductList';
+import Navbar from "./components/Navbar";
 
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App container">
+        <Navbar />
          <Switch>
         <Route exact path ="/products" component={ProductList} />
         <Route exact path ="/products/new" component={ProductAdd} />
