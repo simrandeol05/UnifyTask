@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Navbar = (props) => {
   return(
-      <nav className="navbar-fixed">
+      <nav className="navbar-fixed teal lighten-2">
           <a href="#" data-target="mobile-demo" className="sidenav-trigger">
           <i className="material-icons">menu</i>
           </a>
