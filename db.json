@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "Vans Men's Suede Sk-8 Hi Shoe",
+      "price": "249",
+      "type": "Shoes"
+    },
+    {
+      "id": "2",
+      "productName": "Benneton's perfume",
+      "price": "150",
+      "type": "Accessories"
+    },
+    {
+      "id": "3",
+      "productName": "Gucci's Sunglasses",
+      "price": "2500",
+      "type": "Accessories"
+    },
+    {
+      "id": "4",
+      "productName": "H&M Women's jacket",
+      "price": "500",
+      "type": "Clothes"
+    },
+    {
+      "id": "5",
+      "productName": "Netflix Mug",
+      "price": "100",
+      "type": "Cutlery"
+    },
+    {
+      "id": "6",
+      "productName": "Macbook Pro",
+      "price": "2000",
+      "type": "Gadgets"
+    },
+    {
+      "id": "7",
+      "productName": "Iphone X",
+      "price": "1000",
+      "type": "Gadgets"
+    },
+    {
+      "id": "8",
+      "productName": "Bata's Boots",
+      "price": "800",
+      "type": "Shoes"
+    },
+    {
+      "id": "9",
+      "productName": "Van's sneakers",
+      "price": "750",
+      "type": "Shoes"
+    },
+    {
+      "id": "10",
+      "productName": "Handbag",
+      "price": "700",
+      "type": "Accessories"
+    },
+    {
+      "id": "QV8u6wU"
+    },
+    {
+      "id": "kG1STxL"
+    },
+    {
+      "id": "bk9JPJc"
+    },
+    {
+      "id": "supwBcq"
+    },
+    {
+      "id": "gqd4Euc"
+    },
+    {
+      "id": "Uvah4gz"
+    },
+    {
+      "id": "TengU90"
+    },
+    {
+      "id": "WGkDCR3"
+    },
+    {
+      "id": "b8lbB43"
+    },
+    {
+      "id": "-9U1DIk"
+    },
+    {
+      "id": "NrYhLb1"
+    },
+    {
+      "id": "9O9Det8"
+    },
+    {
+      "id": "ZqCxFdn"
+    },
+    {
+      "id": "b1ByhwN"
+    }
+  ]
+}
