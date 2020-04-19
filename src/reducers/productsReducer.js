@@ -1,5 +1,5 @@
 
-import {RECEIVE_PRODUCTS, ADD_PRODUCT} from "../actions";
+import {RECEIVE_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT} from "../actions";
 
 const initialState = {products:[]}
 export default function productsReducer(state=initialState, action){
@@ -13,6 +13,12 @@ export default function productsReducer(state=initialState, action){
                 ...state,
                 products: state.concat(action.payload)
             };
+        case DELETE_PRODUCT:
+            return {
+                ...state,
+                products: state.filter(product => product.id !== action.payload.id
+)
+            }
     
         default:
             return state;

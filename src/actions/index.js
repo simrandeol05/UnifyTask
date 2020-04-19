@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export const RECEIVE_PRODUCTS = 'GET_PRODUCTS';
 export const ADD_PRODUCT = 'ADD_PRODUCT';
+export const DELETE_PRODUCT = 'DELETE_PRODUCT';
 
 const apiUrl = "http://localhost:8000/products"; 
 
@@ -38,4 +39,14 @@ export const addProduct = ( product ) => dispatch => {
                 error
             }));
    
+};
+
+export const deleteProduct = (id) => dispatch => {
+    return axios.delete(apiUrl+"/"+id)
+    .then(response => {
+        dispatch({type: DELETE_PRODUCT, payload: {id}})
+    })
+    .catch(error => dispatch({
+        error
+    }))
 };

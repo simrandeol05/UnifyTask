@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import { deleteProduct } from "../actions";
 
 class ProductList extends Component{
+
+  constructor(props){
+    super(props);
+  }
 
   render(){
 
     const {products} = this.props;
 
-    if(products.length){
+    if( Object.keys(products).length && products.length > 0 ){
       console.log(this.props.products);
       return(
 
@@ -34,7 +39,9 @@ class ProductList extends Component{
                     </button>
                   </td>
                   <td>
-                    <button className="waves-effect waves-light btn-small">
+                    <button className="waves-effect waves-light btn-small"
+                    onClick = {() => this.props.deleteProduct(product.id)}
+                    >
                       <i className="material-icons">delete</i>
                     </button>
                   </td>
@@ -53,5 +60,11 @@ class ProductList extends Component{
 
 const mapStateToProps = (state) => ({ products:state.products});
  
+const mapDispatchToProps = dispatch => {
+  return{
+    deleteProduct: (id) => dispatch(deleteProduct(id))
+  };
+   
+};
 
-export default connect(mapStateToProps)(ProductList);
+export default connect(mapStateToProps,mapDispatchToProps)(ProductList);
