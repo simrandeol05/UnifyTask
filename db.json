@@ -8,15 +8,27 @@
     },
     {
       "productName": "Gucci HeelsSimran's",
-      "price": "15000",
+      "price": "1500022",
       "type": "ClothesG",
       "id": "bo-R-tK"
     },
     {
-      "productName": "Hamley's toys",
-      "price": "20002",
-      "type": "AccessoriesG",
-      "id": "lOQQwQT"
+      "productName": "Gucci Heels 200",
+      "price": "1500022",
+      "type": "Accessories1",
+      "id": "ZUvm0e7"
+    },
+    {
+      "productName": "New1",
+      "price": "1111",
+      "type": "New",
+      "id": "6koSOtN"
+    },
+    {
+      "productName": "SSS",
+      "price": "sssret",
+      "type": "Readd",
+      "id": "VUW3iA1"
     }
   ]
 }
