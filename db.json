@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "productName": "Gucci Heels 101",
-      "price": "20002",
-      "type": "Shoes1",
-      "id": "aI4MvFD"
-    },
-    {
       "productName": "Gucci HeelsSimran's",
       "price": "1500022",
       "type": "ClothesG",
@@ -23,6 +17,12 @@
       "price": "1111",
       "type": "New",
       "id": "6koSOtN"
+    },
+    {
+      "productName": "Pearls",
+      "price": "1330",
+      "type": "Jewellery",
+      "id": "d7rcogh"
     }
   ]
 }
