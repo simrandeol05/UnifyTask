@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import { deleteProduct } from "../actions";
-
+import ProductEdit from "./ProductEdit";
 import axios from "axios";
 
 class ProductList extends Component{
 
   constructor(props){
     super(props);
+    this.state = {
+      product: "",
+      isEdit: false,
+    }
   }
 
   componentDidMount(){
@@ -28,8 +32,16 @@ class ProductList extends Component{
       );
   }
 
+
+  editClick = (product) => {
+    this.setState({
+      product: product,
+      isEdit: true,
+    });
+  }
+
   render(){
-    
+
     const {products} = (this.props.products.products !== undefined && this.props.products.length > 0) ? this.props.products : this.props;
     
 
@@ -37,7 +49,7 @@ class ProductList extends Component{
       console.log(this.props.products);
       return(
 
-        <div>
+        <div className="container">
           <table className="striped tableClass">
             <thead>
               <tr>
@@ -54,7 +66,9 @@ class ProductList extends Component{
                   <td>{product.price}</td>
                   <td>{product.type}</td>
                   <td>
-                    <button className="waves-effect waves-light btn-small">
+                    <button className="waves-effect waves-light btn-small"
+                      onClick = {() => this.editClick(product)}
+                    >
                       <i className="material-icons">create</i>
                     </button>
                   </td>
@@ -69,6 +83,9 @@ class ProductList extends Component{
               ))}
             </tbody>
           </table>
+           <div>
+              {this.state.isEdit ? <ProductEdit product={this.state.product}/> : null}
+            </div>
           </div>
       );
     }

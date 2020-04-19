@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "productName": "Prada Bag",
-      "price": "2000",
-      "type": "Accessories",
-      "id": "lHf2lnX"
-    },
-    {
       "productName": "Calvin Klein Jacket",
       "price": "2000",
       "type": "Clothes",
@@ -17,6 +11,18 @@
       "price": "2000",
       "type": "Shoes",
       "id": "aI4MvFD"
+    },
+    {
+      "productName": "Gucci Heels",
+      "price": "1500",
+      "type": "Clothes",
+      "id": "bo-R-tK"
+    },
+    {
+      "productName": "Hero Honda Bike",
+      "price": "3000",
+      "type": "Vehicles",
+      "id": "Kudxsof"
     }
   ]
 }

@@ -24,6 +24,9 @@
   color: white;
 }
 
+.displayNone{
+  display: none;
+}
 .App-link {
   color: #61dafb;
 }
