@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "productName": "Calvin Klein Jacket",
-      "price": "2000",
-      "type": "Clothes",
-      "id": "Ni8oyrx"
-    },
-    {
       "productName": "Gucci Heels",
       "price": "2000",
       "type": "Shoes",

@@ -1,21 +1,20 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
 import { deleteProduct } from "../actions";
 import ProductEdit from "./ProductEdit";
 import axios from "axios";
 
-class ProductList extends Component{
-
-  constructor(props){
+class ProductList extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       product: "",
       isEdit: false,
-    }
+    };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     const apiUrl = "http://localhost:8000/products";
     axios
       .get(apiUrl)
@@ -32,23 +31,27 @@ class ProductList extends Component{
       );
   }
 
-
   editClick = (product) => {
-    this.setState({
-      product: product,
-      isEdit: true,
+    // this.props.history.push(`/products/${product.id}/edit`);
+    this.props.history.push({
+      pathname: `/products/${product.id}/edit`,
+      state: {
+        product: product,
+      },
     });
-  }
+    // this.setState({
+    //   product: product,
+    //   isEdit: true,
+    // });
+  };
 
-  render(){
+  render() {
+    console.log(this.props.products);
 
-    const {products} = (this.props.products.products !== undefined && this.props.products.length > 0) ? this.props.products : this.props;
-    
+    const { products } = this.props;
 
-    if( products.length > 0 ){
-      console.log(this.props.products);
-      return(
-
+    if (products.length > 0) {
+      return (
         <div className="container">
           <table className="striped tableClass">
             <thead>
@@ -66,15 +69,19 @@ class ProductList extends Component{
                   <td>{product.price}</td>
                   <td>{product.type}</td>
                   <td>
-                    <button className="waves-effect waves-light btn-small"
-                      onClick = {() => this.editClick(product)}
+                    <button
+                      className="waves-effect waves-light btn-small"
+                      onClick={() => this.editClick(product)}
                     >
                       <i className="material-icons">create</i>
                     </button>
                   </td>
                   <td>
-                    <button className="waves-effect waves-light btn-small"
-                    onClick = {() => this.props.deleteProduct(product.id)}
+                    <button
+                      className="waves-effect waves-light btn-small"
+                      onClick={() =>
+                        this.props.deleteProduct(product.id, products)
+                      }
                     >
                       <i className="material-icons">delete</i>
                     </button>
@@ -83,25 +90,25 @@ class ProductList extends Component{
               ))}
             </tbody>
           </table>
-           <div>
-              {this.state.isEdit ? <ProductEdit product={this.state.product}/> : null}
-            </div>
+          <div>
+            {this.state.isEdit ? (
+              <ProductEdit product={this.state.product} />
+            ) : null}
           </div>
+        </div>
       );
-    }
-    else{
-      return (<div>Kindly refresh the page</div>)
+    } else {
+      return <div>Kindly refresh the page</div>;
     }
   }
 }
 
-const mapStateToProps = (state) => ({ products:state.products});
- 
-const mapDispatchToProps = dispatch => {
-  return{
-    deleteProduct: (id) => dispatch(deleteProduct(id))
+const mapStateToProps = (state) => ({ products: state.products });
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteProduct: (id, products) => dispatch(deleteProduct(id, products)),
   };
-   
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(ProductList);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
