@@ -28,7 +28,6 @@ class ProductAdd extends Component{
         this.setState({
           refresh: true,
         });
-        // return(<Redirect to="/products" />);
     }
 
     render()

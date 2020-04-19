@@ -27,6 +27,12 @@
 .displayNone{
   display: none;
 }
+.rowClass
+{
+  border:5px solid #42a5f5;  
+   margin-top:10px; 
+}
+
 .App-link {
   color: #61dafb;
 }

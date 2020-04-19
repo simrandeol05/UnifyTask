@@ -67,7 +67,7 @@ class ProductEdit extends Component {
     else{
         if (product !== undefined) {
             return (
-                <div className="container">
+                <div className="container" >
                 <h3>Edit Products</h3>
                 <form onSubmit = {this.handleSubmit.bind(this)}>
                     <div className="row">

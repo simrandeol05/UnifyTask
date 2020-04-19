@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(/images/backgroundImg.png) no-repeat;
+  background-size: 100%;
+  height: 400px;
 }
 
 code {
@@ -13,4 +16,9 @@ code {
 }
 .displayNone{
   display: none;
+}
+.rowClass
+{
+  border:5px solid #42a5f5;  
+   margin-top:10px; 
 }
