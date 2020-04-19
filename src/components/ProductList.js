@@ -3,17 +3,37 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import { deleteProduct } from "../actions";
 
+import axios from "axios";
+
 class ProductList extends Component{
 
   constructor(props){
     super(props);
   }
 
+  componentDidMount(){
+    const apiUrl = "http://localhost:8000/products";
+    axios
+      .get(apiUrl)
+      .then((response) => response.data)
+      .then(
+        (result) => {
+          this.setState({
+            products: result,
+          });
+        },
+        (error) => {
+          this.setState({ error });
+        }
+      );
+  }
+
   render(){
+    
+    const {products} = (this.props.products.products !== undefined && this.props.products.length > 0) ? this.props.products : this.props;
+    
 
-    const {products} = this.props;
-
-    if( Object.keys(products).length && products.length > 0 ){
+    if( products.length > 0 ){
       console.log(this.props.products);
       return(
 
@@ -53,7 +73,7 @@ class ProductList extends Component{
       );
     }
     else{
-      return (<div>No Products</div>)
+      return (<div>Kindly refresh the page</div>)
     }
   }
 }

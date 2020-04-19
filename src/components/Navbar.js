@@ -18,6 +18,11 @@ const Navbar = (props) => {
               Add Product
             </Link>
           </li>
+          <li>
+            <Link to="/products/edit" className="textClass">
+              Edit Product
+            </Link>
+          </li>
         </ul>
     </nav>
   );
