@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {connect} from "react-redux";
+import {updateProduct} from "../actions";
+import {Redirect} from "react-router-dom";
 
 class ProductEdit extends Component {
   constructor(props) {
@@ -10,24 +13,46 @@ class ProductEdit extends Component {
       productName: product.productName !== undefined ? product.productName : "",
       price: product.price !== undefined ? product.price : "",
       type: product.type !== undefined ? product.type : "",
-      model_open: true,
+      id: product.id !== undefined ? product.id : "",
     };
+
+    this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangePrice = this.handleChangePrice.bind(this);
+    this.handleChangeType = this.handleChangeType.bind(this);
   }
 
   componentDidMount() {
     console.log(this.props);
   }
 
-  handleChange(e) {
-    const name = e.target.name;
-    const value = e.target.value;
-
+  handleChangeName(e) {
+    e.preventDefault();
     this.setState({
-      [name]: value,
+      productName : e.target.value
+    });
+  }
+  handleChangePrice(e) {
+    e.preventDefault();
+    this.setState({
+      price : e.target.value
+    });
+  }
+  handleChangeType(e) {
+    e.preventDefault();
+    this.setState({
+      type : e.target.value
     });
   }
 
-  handleSubmit(e) {}
+  handleEdit = (e) => {
+       this.props.updateProduct(this.state);
+       return (<Redirect to="/products" />);
+  } 
+
+  handleSubmit =(e) => {
+      e.preventDefault();
+      return (<Redirect to="/products" />);
+  }
 
   render() {
     const { product } = this.props.location.state;
@@ -36,7 +61,7 @@ class ProductEdit extends Component {
       return (
         <div className="container">
           <h3>Edit Products</h3>
-          <form>
+          <form onSubmit = {this.handleSubmit.bind(this)}>
             <div className="row">
               <input
                 placeholder="Product Name"
@@ -44,7 +69,7 @@ class ProductEdit extends Component {
                 type="text"
                 name="productName"
                 value={this.state.productName}
-                onChange={this.handleChange}
+                onChange={this.handleChangeName}
               />
             </div>
             <div className="row">
@@ -54,7 +79,7 @@ class ProductEdit extends Component {
                 type="text"
                 name="price"
                 value={this.state.price}
-                onChange={this.handleChange}
+                onChange={this.handleChangePrice}
               />
             </div>
             <div className="row">
@@ -64,13 +89,24 @@ class ProductEdit extends Component {
                 type="text"
                 name="type"
                 value={this.state.type}
-                onChange={this.handleChange}
+                onChange={this.handleChangeType}
+              />
+            </div>
+            <div className="row" className="displayNone">
+              <input
+               disabled 
+                placeholder="ID"
+                id="ID"
+                type="text"
+                name="type"
+                value={this.state.id}
               />
             </div>
             <div className="row">
               <button
                 type="submit"
                 className="waves-effect waves-light btn right-align"
+                onClick = {this.handleEdit}
               >
                 Add
               </button>
@@ -84,4 +120,10 @@ class ProductEdit extends Component {
   }
 }
 
-export default ProductEdit;
+const mapDispatchToProps = dispatch => {
+    return{
+        updateProduct: (product) => dispatch(updateProduct(product))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ProductEdit);

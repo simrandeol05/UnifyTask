@@ -3,6 +3,7 @@ import axios from "axios";
 export const RECEIVE_PRODUCTS = "GET_PRODUCTS";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 
 const apiUrl = "http://localhost:8000/products";
 
@@ -64,3 +65,15 @@ export const deleteProduct = (id, products) => (dispatch) => {
       })
     );
 };
+
+export const updateProduct = (product) => (dispatch) => {
+    debugger;
+    return axios.patch(apiUrl + "/" + product.id, {
+        productName: product.productName,
+        price: product.price,
+        type: product.type
+    }).then(response => {
+        const data = response.data;
+        dispatch({type: UPDATE_PRODUCT, payload: {id: data.id, productName: data.productName, price: data.price, type: data.type}})
+    }).catch(error => {throw(error)});
+}

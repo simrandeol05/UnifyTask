@@ -1,22 +1,22 @@
 {
   "products": [
     {
-      "productName": "Gucci Heels",
-      "price": "2000",
-      "type": "Shoes",
+      "productName": "Gucci Heels 101",
+      "price": "20002",
+      "type": "Shoes1",
       "id": "aI4MvFD"
     },
     {
-      "productName": "Gucci Heels",
-      "price": "1500",
-      "type": "Clothes",
+      "productName": "Gucci HeelsSimran's",
+      "price": "15000",
+      "type": "ClothesG",
       "id": "bo-R-tK"
     },
     {
-      "productName": "Hero Honda Bike",
-      "price": "3000",
-      "type": "Vehicles",
-      "id": "Kudxsof"
+      "productName": "Hamley's toys",
+      "price": "20002",
+      "type": "AccessoriesG",
+      "id": "lOQQwQT"
     }
   ]
 }

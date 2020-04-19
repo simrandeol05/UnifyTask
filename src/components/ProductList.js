@@ -39,10 +39,6 @@ class ProductList extends Component {
         product: product,
       },
     });
-    // this.setState({
-    //   product: product,
-    //   isEdit: true,
-    // });
   };
 
   render() {

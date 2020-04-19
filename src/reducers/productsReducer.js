@@ -1,4 +1,4 @@
-import { RECEIVE_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT } from "../actions";
+import { RECEIVE_PRODUCTS, ADD_PRODUCT, DELETE_PRODUCT, UPDATE_PRODUCT } from "../actions";
 
 const initialState = { products: [] };
 export default function productsReducer(state = initialState, action) {
@@ -12,6 +12,20 @@ export default function productsReducer(state = initialState, action) {
 
     case DELETE_PRODUCT:
       return [...action.payload];
+
+    case UPDATE_PRODUCT:
+        debugger;
+        return{
+            ...state.map((product) => {
+                if(product.id === action.payload.id){
+                    return{
+                        productName: action.payload.productName,
+                        price: action.payload.price,
+                        type: action.payload.type
+                    }
+                }
+            })
+        }
 
     default:
       return state;
