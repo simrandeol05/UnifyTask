@@ -2,8 +2,8 @@
   "products": [
     {
       "productName": "Titan's watch",
-      "price": "15000",
-      "type": "Accessories",
+      "price": "14500",
+      "type": "Watches",
       "id": "bo-R-tK"
     },
     {
@@ -31,10 +31,10 @@
       "id": "CgwFLFg"
     },
     {
-      "productName": "Watch",
-      "price": "Rs 1200",
-      "type": "Accessories",
-      "id": "LdZuiZZ"
+      "productName": "Nykaa Makeup",
+      "price": "3000",
+      "type": "Skin Care",
+      "id": "PGcGUhX"
     }
   ]
 }
