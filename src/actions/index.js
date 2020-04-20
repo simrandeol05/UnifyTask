@@ -67,7 +67,6 @@ export const deleteProduct = (id, products) => (dispatch) => {
 };
 
 export const updateProduct = (product) => (dispatch) => {
-    debugger;
     return axios.patch(apiUrl + "/" + product.id, {
         productName: product.productName,
         price: product.price,

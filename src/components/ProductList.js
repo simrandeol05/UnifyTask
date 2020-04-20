@@ -94,7 +94,7 @@ class ProductList extends Component {
         </div>
       );
     } else {
-      return <div>Kindly refresh the page</div>;
+      return <div>Kindly, refresh the page</div>
     }
   }
 }

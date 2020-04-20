@@ -1,28 +1,34 @@
 {
   "products": [
     {
-      "productName": "Gucci HeelsSimran's",
-      "price": "1500022",
-      "type": "ClothesG",
+      "productName": "Titan's watch",
+      "price": "15000",
+      "type": "Accessories",
       "id": "bo-R-tK"
     },
     {
       "productName": "Gucci Heels 200",
-      "price": "150002233",
+      "price": "15000",
       "type": "Accessories1",
       "id": "ZUvm0e7"
     },
     {
-      "productName": "New111",
-      "price": "1111",
-      "type": "New",
+      "productName": "Titan's Sunglasses",
+      "price": "5500",
+      "type": "Sunglasses",
       "id": "6koSOtN"
     },
     {
-      "productName": "Pearls",
+      "productName": "JP Pearls",
       "price": "1330",
       "type": "Jewellery",
       "id": "d7rcogh"
+    },
+    {
+      "productName": "Calvin Klein Jacket",
+      "price": "15000",
+      "type": "Clothes",
+      "id": "VcI2l8d"
     }
   ]
 }

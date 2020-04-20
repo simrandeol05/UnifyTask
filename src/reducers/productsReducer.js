@@ -18,6 +18,7 @@ export default function productsReducer(state = initialState, action) {
         return{
             ...state.map((product) => {
                 if(product.id === action.payload.id){
+                    debugger;
                     return{
                         productName: action.payload.productName,
                         price: action.payload.price,
