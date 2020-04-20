@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/simrandeol05/UnifyTask.git/static/css/main.e10a1377.chunk.css",
-    "main.js": "/simrandeol05/UnifyTask.git/static/js/main.2e3b98c6.chunk.js",
-    "main.js.map": "/simrandeol05/UnifyTask.git/static/js/main.2e3b98c6.chunk.js.map",
-    "runtime-main.js": "/simrandeol05/UnifyTask.git/static/js/runtime-main.747c7f24.js",
-    "runtime-main.js.map": "/simrandeol05/UnifyTask.git/static/js/runtime-main.747c7f24.js.map",
-    "static/js/2.3c82aa7a.chunk.js": "/simrandeol05/UnifyTask.git/static/js/2.3c82aa7a.chunk.js",
-    "static/js/2.3c82aa7a.chunk.js.map": "/simrandeol05/UnifyTask.git/static/js/2.3c82aa7a.chunk.js.map",
-    "index.html": "/simrandeol05/UnifyTask.git/index.html",
-    "precache-manifest.0f60ab697be9d6cf490a872071bf8359.js": "/simrandeol05/UnifyTask.git/precache-manifest.0f60ab697be9d6cf490a872071bf8359.js",
-    "service-worker.js": "/simrandeol05/UnifyTask.git/service-worker.js",
-    "static/css/main.e10a1377.chunk.css.map": "/simrandeol05/UnifyTask.git/static/css/main.e10a1377.chunk.css.map",
-    "static/js/2.3c82aa7a.chunk.js.LICENSE.txt": "/simrandeol05/UnifyTask.git/static/js/2.3c82aa7a.chunk.js.LICENSE.txt"
+    "main.css": "/UnifyTask/static/css/main.e10a1377.chunk.css",
+    "main.js": "/UnifyTask/static/js/main.dc28c8ad.chunk.js",
+    "main.js.map": "/UnifyTask/static/js/main.dc28c8ad.chunk.js.map",
+    "runtime-main.js": "/UnifyTask/static/js/runtime-main.a28c3b0d.js",
+    "runtime-main.js.map": "/UnifyTask/static/js/runtime-main.a28c3b0d.js.map",
+    "static/js/2.3c82aa7a.chunk.js": "/UnifyTask/static/js/2.3c82aa7a.chunk.js",
+    "static/js/2.3c82aa7a.chunk.js.map": "/UnifyTask/static/js/2.3c82aa7a.chunk.js.map",
+    "index.html": "/UnifyTask/index.html",
+    "precache-manifest.d5de8a931d8c138e3f0fd1d66fc3f4cc.js": "/UnifyTask/precache-manifest.d5de8a931d8c138e3f0fd1d66fc3f4cc.js",
+    "service-worker.js": "/UnifyTask/service-worker.js",
+    "static/css/main.e10a1377.chunk.css.map": "/UnifyTask/static/css/main.e10a1377.chunk.css.map",
+    "static/js/2.3c82aa7a.chunk.js.LICENSE.txt": "/UnifyTask/static/js/2.3c82aa7a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.747c7f24.js",
+    "static/js/runtime-main.a28c3b0d.js",
     "static/js/2.3c82aa7a.chunk.js",
     "static/css/main.e10a1377.chunk.css",
-    "static/js/main.2e3b98c6.chunk.js"
+    "static/js/main.dc28c8ad.chunk.js"
   ]
 }
