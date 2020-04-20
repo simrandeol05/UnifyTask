@@ -2,7 +2,7 @@
   "products": [
     {
       "productName": "Titan's watch",
-      "price": "15000",
+      "price": "13000",
       "type": "Accessories",
       "id": "bo-R-tK"
     },
@@ -29,6 +29,12 @@
       "price": "15000",
       "type": "Clothes",
       "id": "VcI2l8d"
+    },
+    {
+      "productName": "H&M Jacket",
+      "price": "3000",
+      "type": "Clothes",
+      "id": "CgwFLFg"
     }
   ]
 }

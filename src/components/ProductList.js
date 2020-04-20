@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
 import { deleteProduct } from "../actions";
 import ProductEdit from "./ProductEdit";
 import axios from "axios";
@@ -11,7 +10,10 @@ class ProductList extends Component {
     this.state = {
       product: "",
       isEdit: false,
+      term: "",
+      showSearch: false,
     };
+    this.searchHandler = this.searchHandler.bind(this);
   }
 
   componentDidMount() {
@@ -31,8 +33,8 @@ class ProductList extends Component {
       );
   }
 
+  //To pass products in Edit Component
   editClick = (product) => {
-    // this.props.history.push(`/products/${product.id}/edit`);
     this.props.history.push({
       pathname: `/products/${product.id}/edit`,
       state: {
@@ -41,6 +43,19 @@ class ProductList extends Component {
     });
   };
 
+  searchHandler(e){
+    this.setState({
+      term: e.target.value,
+      showSearch : true,
+    });
+  }
+
+  searchingFor = (term) => {
+    return function(x){
+      return x.productName.toLowerCase().includes(term.toLowerCase()) || !term;
+    }
+  }
+
   render() {
     console.log(this.props.products);
 
@@ -48,7 +63,23 @@ class ProductList extends Component {
 
     if (products.length > 0) {
       return (
+
         <div className="container">
+
+         <div className="searchBox">
+         <form>
+          <input className="searchBox" placeholder="Search" type="text" 
+            onChange={this.searchHandler}
+          />
+         </form>
+           {products.filter(this.searchingFor(this.state.term)).map((product) => (
+             <div key = {product.id}>
+              {this.state.showSearch ? <p>{product.productName}</p> : null}
+             </div>
+           ))}
+         </div>
+
+
           <table className="striped tableClass">
             <thead>
               <tr>
