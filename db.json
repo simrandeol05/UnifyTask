@@ -2,15 +2,9 @@
   "products": [
     {
       "productName": "Titan's watch",
-      "price": "13000",
+      "price": "15000",
       "type": "Accessories",
       "id": "bo-R-tK"
-    },
-    {
-      "productName": "Gucci Heels 200",
-      "price": "15000",
-      "type": "Accessories1",
-      "id": "ZUvm0e7"
     },
     {
       "productName": "Titan's Sunglasses",
@@ -35,6 +29,12 @@
       "price": "3000",
       "type": "Clothes",
       "id": "CgwFLFg"
+    },
+    {
+      "productName": "Watch",
+      "price": "Rs 1200",
+      "type": "Accessories",
+      "id": "LdZuiZZ"
     }
   ]
 }

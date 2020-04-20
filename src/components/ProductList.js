@@ -72,11 +72,6 @@ class ProductList extends Component {
             onChange={this.searchHandler}
           />
          </form>
-           {products.filter(this.searchingFor(this.state.term)).map((product) => (
-             <div key = {product.id}>
-              {this.state.showSearch ? <p>{product.productName}</p> : null}
-             </div>
-           ))}
          </div>
 
 
@@ -90,7 +85,7 @@ class ProductList extends Component {
               </tr>
             </thead>
             <tbody className="stripped">
-              {products.map((product) => (
+              {products.filter(this.searchingFor(this.state.term)).map((product) => (
                 <tr key={product.id}>
                   <td>{product.productName}</td>
                   <td>{product.price}</td>
