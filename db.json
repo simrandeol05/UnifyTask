@@ -2,7 +2,7 @@
   "products": [
     {
       "productName": "Titan's watch",
-      "price": "14500",
+      "price": "1600",
       "type": "Watches",
       "id": "bo-R-tK"
     },
@@ -11,12 +11,6 @@
       "price": "5500",
       "type": "Sunglasses",
       "id": "6koSOtN"
-    },
-    {
-      "productName": "JP Pearls",
-      "price": "1330",
-      "type": "Jewellery",
-      "id": "d7rcogh"
     },
     {
       "productName": "Calvin Klein Jacket",
@@ -35,6 +29,12 @@
       "price": "3000",
       "type": "Skin Care",
       "id": "PGcGUhX"
+    },
+    {
+      "productName": "Gucci Heels 101",
+      "price": "1500",
+      "type": "Accessories",
+      "id": "zVpRJZY"
     }
   ]
 }
