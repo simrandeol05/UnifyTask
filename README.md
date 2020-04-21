@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CRUD operation with React and Redux. Search also was implemented in this.
 
 ## Available Scripts
 
