@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: url(/images/cool-background.png) no-repeat;
 }
 
 .App-logo {
@@ -24,13 +25,12 @@
   color: white;
 }
 
-.displayNone{
+.displayNone {
   display: none;
 }
-.rowClass
-{
-  border:5px solid #42a5f5;  
-   margin-top:10px; 
+.rowClass {
+  border: 5px solid #42a5f5;
+  margin-top: 10px;
 }
 
 .App-link {
